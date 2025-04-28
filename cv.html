@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Mahandana - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Daniel Mahandana</h1>
+            <p>Business & Information Management Professional | AI Contributor | Cloud Enthusiast</p>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#highlights">Highlights</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="container fade-in">
+            <h2>About Me</h2>
+            <p>
+                Results-driven professional passionate about technology, innovation, and business growth.
+                Currently pursuing a Bachelor of Commerce in Information Management. Skilled in AI-driven solutions,
+                cloud development, and partner engagement.
+            </p>
+        </section>
+
+        <section id="skills" class="container fade-in">
+            <h2>Skills</h2>
+            <ul>
+                <li>IT Support & Troubleshooting (Hardware, Software, Connectivity)</li>
+                <li>System Maintenance (Email, Shared Drives, Cloud Tools)</li>
+                <li>Basic Web Development (HTML/CSS, WordPress Management)</li>
+                <li>Cross-Cultural Team Collaboration</li>
+                <li>Content Creation (Professional Writing, Visual Storytelling)</li>
+                <li>Cloud Engineering & System Development</li>
+            </ul>
+        </section>
+
+        <section id="experience" class="container fade-in">
+            <h2>Experience</h2>
+            <div class="experience-item">
+                <h3>AI Tool Development - GESS Social Entrepreneurship Program (2024)</h3>
+                <p>Developed AI-driven tools in an international team; created cross-regional accessible content and assets.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Microsoft Learn Student Ambassador (2023 - Present)</h3>
+                <p>Delivered workshops, provided IT support, and created digital content using Microsoft technologies.</p>
+            </div>
+            <div class="experience-item">
+                <h3>P&G PEAKathon Finalist (2023)</h3>
+                <p>Developed digital prototypes and strategic presentations under tight deadlines.</p>
+            </div>
+            <div class="experience-item">
+                <h3>Outlier AI - Contributor (2024 - Present)</h3>
+                <p>Enhanced AI model outputs and fine-tuned globally deployed AI response systems.</p>
+            </div>
+        </section>
+
+        <section id="education" class="container fade-in">
+            <h2>Education</h2>
+            <p><strong>University of Johannesburg</strong> (2022 - 2024)</p>
+            <ul>
+                <li>Bachelor of Commerce (BCom) in Information Management</li>
+                <li>Major Modules: Business Management, Information Management</li>
+                <li>Capstone: Content Management System Implementation</li>
+            </ul>
+        </section>
+
+        <section id="highlights" class="container fade-in">
+            <h2>Highlights & Awards</h2>
+            <div class="award">
+                <h3>NASA International Space Apps Challenge (2024)</h3>
+                <p><em>
+                    Outstanding Participation Award<br>
+                    "Addressing challenges we face on Earth and in space" - Dr. Keith Gaddis, NASA
+                </em></p>
+            </div>
+            <div class="award">
+                <h3>She Leads Hackathon - Second Place (2024)</h3>
+                <p>Led visual design and team coordination for a winning social impact project.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="container fade-in">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:Lutendomahandana01@gmail.com">Lutendomahandana01@gmail.com</a></p>
+            <p>Phone: +27 68 117 6544</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/lutendo-mahandana-/" target="_blank">View Profile</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Daniel Mahandana. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.1 };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                } else {
+                    entry.target.classList.add('appear');
+                    appearOnScroll.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            appearOnScroll.observe(fader);
+        });
+    </script>
+</body>
+</html>
